@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE html>
+
+
+
+
+
+<window name="window" hidechrome="true" id="main" title="Calculator" width="200" height="250" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
+
+  <hbox class="topbar" >
+    <titlebar id="titleBar" width="400" height="25">
+      <label id="titleBarText" class="titleBarTitleText" value=""/>
+    </titlebar>
+    <span class="titleBarMinimizeButton" onclick="window.minimize();">
+      __
+    </span>
+    <span class="titleBarCloseButton" onclick="window.close();">
+      ×
+    </span>
+  </hbox>
+
+  <script type="application/javascript" src="chrome://Calculator/content/main.js"/>
+            <tr>
+                <td colspan="4" class="calc_td_result">
+                    <label hidespinbuttons="true" type="number" style="plain" readonly="true" name="calc_result" id="calc_result" class="calc_result" onkeydown="javascript:key_detect_calc('calc',event);" >
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:f_calc('calc','ce');" >CE</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:f_calc('calc','nbs');" >&#8592;</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:f_calc('calc','%');" >%</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:f_calc('calc','+');" >+</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:add_calc('calc',7);" >7</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:add_calc('calc',8);" >8</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:add_calc('calc',9);" >9</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:f_calc('calc','-');" >-</a>
+                </td>
+            </tr>
+                        <tr>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" label="4" onclick="javascript:add_calc('calc',4);" >4</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" label="5" onclick="javascript:add_calc('calc',5);" >5</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" label="6" onclick="javascript:add_calc('calc',6);" >6</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:f_calc('calc','*');" >×</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:add_calc('calc',1);" >1</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:add_calc('calc',2);" >2</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:add_calc('calc',3);" >3</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:f_calc('calc','/');" >&#247;</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:add_calc('calc',0);" >0</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:f_calc('calc','+-');" >&#177;</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:add_calc('calc','.');" >,</a>
+                </td>
+                <td class="calc_td_btn">
+                        <a class="calc_btn" onclick="javascript:f_calc('calc','=');" >=</a>
+                </td>
+            </tr>
+
+        <script type="text/javascript">
+                document.getElementById('calc').onload=init_calc('calc');
+        </script>
+
+</window>
